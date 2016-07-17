@@ -40,7 +40,33 @@ extension SQLiteManager {
 }
 
 
-
+// MARK:- 事务相关的操作
+extension SQLiteManager {
+    func beginTransaction() {
+        // 1.开启事务的语句
+        let beginTransaction = "BEGIN TRANSACTION"
+        
+        // 2.执行
+        execSQL(beginTransaction)
+    }
+    
+    func commitTransaction() {
+        // 1.提交事务的语句
+        let commitTransaction = "COMMIT TRANSACTION"
+        
+        // 2.执行
+        execSQL(commitTransaction)
+    }
+    
+    func rollbackTransaction() {
+        // 1.回滚事务的语句
+        let rollbackTransaction = "ROLLBACK TRANSACTION"
+        
+        // 2.执行
+        execSQL(rollbackTransaction)
+    }
+    
+}
 
 
 

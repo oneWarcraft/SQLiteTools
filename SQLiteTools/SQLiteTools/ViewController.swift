@@ -98,21 +98,45 @@ extension ViewController {
         SQLiteManager.shareInstance.execSQL(deleteSQL)
     }
     
-    //插入10万条对象数据
+//    //插入10万条对象数据
+//    @IBAction func InsertObjectsData()
+//    {
+//        
+//        let startTime = CACurrentMediaTime()
+//        
+//        for stu in self.status {
+//            stu.insertIntoDB()
+//        }
+//        
+//        let endTime = CACurrentMediaTime()
+//        
+//        print(endTime - startTime)
+//        
+//    }
+
+    //插入10条对象数据 - 提交事务方式
     @IBAction func InsertObjectsData()
     {
-        
-        let startTime = CACurrentMediaTime()
-        
-        for stu in self.status {
-            stu.insertIntoDB()
+        dispatch_async(dispatch_get_global_queue(0, 0))
+        {
+            let startTime = CACurrentMediaTime()
+            
+            // 1.开启事务
+            SQLiteManager.shareInstance.beginTransaction()
+            
+            // 2.插入数据
+            for (_, stu) in self.status.enumerate() {
+                stu.insertIntoDB()
+            }
+            
+            // 3.提交事务
+            SQLiteManager.shareInstance.commitTransaction()
+            
+            let endTime = CACurrentMediaTime()
+            
+            print(endTime - startTime)
         }
         
-        let endTime = CACurrentMediaTime()
-        
-        print(endTime - startTime)
-        
     }
-    
 }
 
