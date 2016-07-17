@@ -68,6 +68,71 @@ extension SQLiteManager {
     
 }
 
+// MARK:- 查询数据操作
+extension SQLiteManager {
+    func queryData(querySQLString : String) -> [[String : NSObject]] {
+        // 0.将querySQLString转成C语言字符串
+        
+        let cQuerySQLString = querySQLString.cStringUsingEncoding(NSUTF8StringEncoding)!
+        
+        // 1.定义游标(指针)
+        var stmt : COpaquePointer = nil
+        
+        // 2.准备查询,并且给游标赋值
+        sqlite3_prepare_v2(db, cQuerySQLString, -1, &stmt, nil)
+        
+        // 3.开始查询
+        // 3.1.取出列数
+        let count = sqlite3_column_count(stmt)
+        
+        // 3.2.定义数组
+        var tempArray = [[String : NSObject]]()
+        
+        // 3.3.查询数据
+        while sqlite3_step(stmt) == SQLITE_ROW {
+            
+            // 遍历所有的键值对
+            var dict = [String : NSObject]()
+            for i in 0..<count {
+                let cKey = sqlite3_column_name(stmt, i)
+                let key = String(CString: cKey, encoding: NSUTF8StringEncoding)!
+                let cValue = UnsafePointer<Int8>(sqlite3_column_text(stmt, i))
+                let value = String(CString: cValue, encoding: NSUTF8StringEncoding)
+                
+                dict[key] = value
+            }
+            // 将字典放入到数组中
+            tempArray.append(dict)
+        }
+        return tempArray
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

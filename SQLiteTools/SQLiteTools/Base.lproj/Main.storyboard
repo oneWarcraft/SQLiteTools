@@ -18,45 +18,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jk8-Wd-Oi4">
-                                <rect key="frame" x="113" y="161" width="160" height="40"/>
+                                <rect key="frame" x="113" y="78" width="160" height="40"/>
                                 <state key="normal" title="创建数据库表"/>
                                 <connections>
                                     <action selector="createTableClick_BTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CeK-Ws-nwX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8X-5o-R1k">
-                                <rect key="frame" x="113" y="216" width="160" height="40"/>
+                                <rect key="frame" x="113" y="133" width="160" height="40"/>
                                 <state key="normal" title="删除数据库表"/>
                                 <connections>
                                     <action selector="dropTableClick_BTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ypt-2G-aQk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVw-ze-SVP">
-                                <rect key="frame" x="113" y="314" width="160" height="40"/>
+                                <rect key="frame" x="113" y="231" width="160" height="40"/>
                                 <state key="normal" title="插入数据"/>
                                 <connections>
                                     <action selector="insertData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sA0-Ll-tk7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-DW-BPb">
+                                <rect key="frame" x="113" y="421" width="160" height="40"/>
+                                <state key="normal" title="插入对象数据"/>
+                                <connections>
+                                    <action selector="InsertObjectsData" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvK-lE-OGd"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHp-E0-M9O">
-                                <rect key="frame" x="113" y="375" width="160" height="40"/>
+                                <rect key="frame" x="113" y="292" width="160" height="40"/>
                                 <state key="normal" title="更新数据"/>
                                 <connections>
                                     <action selector="updateData" destination="BYZ-38-t0r" eventType="touchUpInside" id="vdq-Mv-Mi9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0L-rf-qcN">
-                                <rect key="frame" x="113" y="440" width="160" height="40"/>
+                                <rect key="frame" x="113" y="357" width="160" height="40"/>
                                 <state key="normal" title="删除数据"/>
                                 <connections>
                                     <action selector="deleteData" destination="BYZ-38-t0r" eventType="touchUpInside" id="YIE-JA-MdS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-DW-BPb">
-                                <rect key="frame" x="113" y="504" width="160" height="40"/>
-                                <state key="normal" title="插入对象数据"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGe-vr-DMu">
+                                <rect key="frame" x="113" y="477" width="160" height="40"/>
+                                <state key="normal" title="查询数据"/>
                                 <connections>
-                                    <action selector="InsertObjectsData" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvK-lE-OGd"/>
+                                    <action selector="queryData" destination="BYZ-38-t0r" eventType="touchUpInside" id="584-rh-6km"/>
                                 </connections>
                             </button>
                         </subviews>

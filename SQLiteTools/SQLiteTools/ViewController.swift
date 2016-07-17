@@ -140,3 +140,50 @@ extension ViewController {
     }
 }
 
+// MARK:- DQL语句操作
+extension ViewController {
+        // 1.定义游标
+    @IBAction func queryData() {
+        // 1.获取查询的语句
+        let querySQL = "SELECT * FROM t_student LIMIT 0, 30;"
+        
+        // 2.执行查询语句
+        let resultArray = SQLiteManager.shareInstance.queryData(querySQL)
+        
+        // 3.将字典转成模型对象
+        var tempArray = [Student]()
+        
+        for dict in resultArray {
+            tempArray.append(Student(dict: dict))
+        }
+        
+        print(tempArray)
+        
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

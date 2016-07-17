@@ -12,6 +12,18 @@ import UIKit
 class Student: NSObject {
     var name : String = ""
     var age : Int = 0
+    
+    override init() {
+    }
+    
+    init(dict : [String : NSObject]) {
+        super.init()
+        
+        setValuesForKeysWithDictionary(dict)
+    }
+    
+    override func setValue(value: AnyObject?, forKey key: String) {
+    }
 }
 
 extension Student {
