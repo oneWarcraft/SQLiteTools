@@ -52,6 +52,13 @@
                                     <action selector="deleteData" destination="BYZ-38-t0r" eventType="touchUpInside" id="YIE-JA-MdS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-DW-BPb">
+                                <rect key="frame" x="113" y="504" width="160" height="40"/>
+                                <state key="normal" title="插入对象数据"/>
+                                <connections>
+                                    <action selector="InsertObjectsData" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvK-lE-OGd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

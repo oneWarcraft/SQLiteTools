@@ -10,6 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    lazy var status : [Student] = {
+       
+        var tempArray = [Student]()
+        
+        for i in 0..<100000
+        {
+            let stu = Student()
+            stu.name = "sophia\(arc4random_uniform(100))"
+            stu.age = 20 + Int(arc4random_uniform(10))
+            tempArray.append(stu)
+        }
+        
+        return tempArray
+    }()
+    
+    
+    
     var db : COpaquePointer = nil
     
     override func viewDidLoad() {
@@ -79,6 +96,22 @@ extension ViewController {
         
         // 2.执行语句
         SQLiteManager.shareInstance.execSQL(deleteSQL)
+    }
+    
+    //插入10万条对象数据
+    @IBAction func InsertObjectsData()
+    {
+        
+        let startTime = CACurrentMediaTime()
+        
+        for stu in self.status {
+            stu.insertIntoDB()
+        }
+        
+        let endTime = CACurrentMediaTime()
+        
+        print(endTime - startTime)
+        
     }
     
 }

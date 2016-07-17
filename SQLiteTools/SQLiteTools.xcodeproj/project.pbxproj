@@ -14,6 +14,7 @@
 		0C248A611D3B1F2900C8D817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C248A5F1D3B1F2900C8D817 /* LaunchScreen.storyboard */; };
 		0C248A6A1D3B248000C8D817 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C248A691D3B248000C8D817 /* libsqlite3.0.tbd */; };
 		0C248A6C1D3B24FC00C8D817 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C248A6B1D3B24FC00C8D817 /* SQLiteManager.swift */; };
+		0C4249FA1D3B5DF6006EDE74 /* student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4249F91D3B5DF6006EDE74 /* student.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		0C248A681D3B1FE200C8D817 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		0C248A691D3B248000C8D817 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		0C248A6B1D3B24FC00C8D817 /* SQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
+		0C4249F91D3B5DF6006EDE74 /* student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = student.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				0C248A621D3B1F2900C8D817 /* Info.plist */,
 				0C248A681D3B1FE200C8D817 /* Bridge.h */,
 				0C248A6B1D3B24FC00C8D817 /* SQLiteManager.swift */,
+				0C4249F91D3B5DF6006EDE74 /* student.swift */,
 			);
 			path = SQLiteTools;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				0C248A6C1D3B24FC00C8D817 /* SQLiteManager.swift in Sources */,
 				0C248A591D3B1F2900C8D817 /* ViewController.swift in Sources */,
 				0C248A571D3B1F2900C8D817 /* AppDelegate.swift in Sources */,
+				0C4249FA1D3B5DF6006EDE74 /* student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +302,7 @@
 				0C248A671D3B1F2900C8D817 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
